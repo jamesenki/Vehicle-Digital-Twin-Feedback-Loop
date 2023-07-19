@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Vehicle-Digital-Twin-Feedback-Loop
+  annotations:
+    github.com/project-slug: jamesenki/Vehicle-Digital-Twin-Feedback-Loop
+spec:
+  type: other
+  lifecycle: unknown
+  owner: admins
