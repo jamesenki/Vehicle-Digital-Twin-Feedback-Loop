@@ -1,7 +1,9 @@
-apiVersion: backstage.io/v1
-kind: CatalogInfo
+apiVersion: backstage.io/v1alpha1
+kind: Component
 metadata:
-  name: cms-catalog
+  name: Vehicle-Digital-Twin-Feedback-Loop
+  annotations:
+    github.com/project-slug: jamesenki/Vehicle-Digital-Twin-Feedback-Loop
 spec:
-  repositories:
-    - url: https://github.com/jamesenki/Vehicle-Digital-Twin-Feedback-Loop
+  type: other
+  lifecycle: unknown
