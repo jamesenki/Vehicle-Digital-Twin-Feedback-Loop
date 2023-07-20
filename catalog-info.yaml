@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1
 kind: CatalogInfo
 metadata:
-  name: my-catalog
+  name: cms-catalog
 spec:
   repositories:
     - url: https://github.com/jamesenki/Vehicle-Digital-Twin-Feedback-Loop
