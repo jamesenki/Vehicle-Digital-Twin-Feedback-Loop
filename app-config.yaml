@@ -11,7 +11,7 @@ componentMetadata: &componentMetadata
 apiVersion: backstage.io/v1alpha1
 kind: Service
 moreMetadata:
-  name: *moreMetadata
+  name: &moreMetadata
 spec:
   type: terraform
   lifecycle: experimental
