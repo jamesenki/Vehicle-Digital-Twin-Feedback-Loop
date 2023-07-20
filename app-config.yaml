@@ -2,7 +2,7 @@ name: "Vehicle Digital Twin Feedback Loop"
 description: Repository for Vehicle Digital Twin Feedback Loop
 
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: service
 metadata:
   name: aws-terraform-deployment
   description: Deployment to AWS using Terraform
