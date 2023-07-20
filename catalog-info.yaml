@@ -1,22 +1,10 @@
-apiVersion: backstage.io/v1
-kind: Service
+apiVersion: backstage.io/v1alpha1
+kind: Component
 metadata:
-  name: vehicle-digital-twin-feedback-loop
-  description: Repository for Vehicle Digital Twin Feedback Loop
-  tags:
-    - terraform
-    - aws
-    # Add any other relevant tags
+  name: Vehicle-Digital-Twin-Feedback-Loop
+  annotations:
+    github.com/project-slug: jamesenki/Vehicle-Digital-Twin-Feedback-Loop
 spec:
-  type: service
-  lifecycle: experimental
+  type: other
+  lifecycle: unknown
   owner: everyone
-  # Replace with the URL of your forked repository
-  lifecycleOwner: https://github.com/jamesenki/Vehicle-Digital-Twin-Feedback-Loop
-  provides:
-    - infrastructure
-  implementsApis:
-    - kind: graphql
-      lifecycle: experimental
-      # Replace with the path to your config.json file
-      implements: https://github.com/jamesenki/Vehicle-Digital-Twin-Feedback-Loop/atlas-backend/Connected-Vehicle/graphql/config.json
