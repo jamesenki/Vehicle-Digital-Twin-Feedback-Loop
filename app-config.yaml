@@ -1,4 +1,4 @@
-# app-config.yaml
+v# app-config.yaml
 
 metadata:
   name: "Vehicle Digital Twin Feedback Loop"
@@ -9,13 +9,13 @@ componentMetadata: &componentMetadata
   description: Deployment to AWS using Terraform
 
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Service
 moreMetadata:
-  name: *componentMetadata
+  name: *moreMetadata
 spec:
   type: terraform
   lifecycle: experimental
-  owner: your-team-name
+  owner: everyone
   provides:
     - infrastructure
   template:
