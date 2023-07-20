@@ -1,17 +1,11 @@
-v# app-config.yaml
-
-metadata:
-  name: "Vehicle Digital Twin Feedback Loop"
-  description: Repository for Vehicle Digital Twin Feedback Loop
-
-componentMetadata: &componentMetadata
-  name: aws-terraform-deployment
-  description: Deployment to AWS using Terraform
+name: "Vehicle Digital Twin Feedback Loop"
+description: Repository for Vehicle Digital Twin Feedback Loop
 
 apiVersion: backstage.io/v1alpha1
-kind: Service
-moreMetadata:
-  name: &moreMetadata
+kind: Component
+metadata:
+  name: aws-terraform-deployment
+  description: Deployment to AWS using Terraform
 spec:
   type: terraform
   lifecycle: experimental
@@ -21,7 +15,7 @@ spec:
   template:
     path: vehicle-ts/src/server.ts
   config:
-    source: "your-terraform-module-source"
+    source: vehicle-ts/src/Dockerfile
     variables:
       region: us-west-2
       # Add any other variables required by your Terraform script
