@@ -5,7 +5,6 @@ metadata:
   annotations:
     github.com/project-slug: jamesenki/Vehicle-Digital-Twin-Feedback-Loop
 spec:
-  repositories: 
-   - url: https://github.com/jamesenki/Vehicle-Digital-Twin-Feedback-Loop
-  lifecycle: experimental
-  owner: everyone
+  type: other
+  lifecycle: unknown
+  owner: admins
