@@ -1,8 +1,7 @@
-
 # app-config.yaml
 
 metadata:
-  name: !!str Vehicle Digital Twin Feedback Loop
+  name: "Vehicle Digital Twin Feedback Loop"
   description: Repository for Vehicle Digital Twin Feedback Loop
 
 componentMetadata: &componentMetadata
