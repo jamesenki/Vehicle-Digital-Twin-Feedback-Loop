@@ -1,5 +1,5 @@
 # app-config.yaml
-
+apiVersion: backstage.io/v1alpha1
 metadata:
   name: ${name}
   description: Repository for ${name}
