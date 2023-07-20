@@ -1,40 +1,28 @@
 # app-config.yaml
 
-metadata:
-  name: &repositoryName ${repositoryName}
-  description: Repository for *repositoryName
+name: Vehicle Digital Twin Feedback Loop
+description: Repository for Vehicle Digital Twin Feedback Loop
+
+componentMetadata: &componentMetadata
+  name: aws-terraform-deployment-mongo
+  description: Deployment to AWS using Terraform
 
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: aws-terraform-deployment
-  description: Deployment to AWS using Terraform
-  annotations:
-    terraform.io/backend-config: &backendConfig |
-      bucket = "${terraformStateBucket}"
-      key    = "${terraformStateKey}"
+  name: *componentMetadata
 spec:
   type: terraform
   lifecycle: experimental
-  owner: ${teamName}
+  owner: everyone
   provides:
     - infrastructure
   template:
-    path: *serverPath
-    config:
-      source: "${terraformModuleSource}"
-      variables:
-        region: ${awsRegion}
-        # Add any other variables required by your Terraform script
-
-# GraphQL API section
-- apiVersion: backstage.io/v1alpha1
-  kind: GraphQLAPI
-  metadata:
-    <<: *componentMetadata
-    name: &apiName ${apiName}
-    description: GraphQL APIs for *apiName
-  spec:
-    schemaPath: *schemaPath
+    path: vehicle-ts/src/server.ts
+  config:
+    source: "your-terraform-module-source"
+    variables:
+      region: us-west-2
+      # Add any other variables required by your Terraform script
 
 # Add any other sections or configurations you require for your repository
