@@ -8,3 +8,43 @@ spec:
   type: other
   lifecycle: unknown
   owner: admins
+
+  # app-config.yaml
+
+metadata:
+  name: ${name}
+  description: Repository for ${name}
+
+apiVersion: backstage.io/v1alpha1
+kind: GraphQLAPI
+metadata:
+  name: ${apiName}
+  description: GraphQL APIs for ${apiName}
+spec:
+  schemaPath: ${schemaPath}
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: aws-terraform-deployment
+  description: Deployment to AWS using Terraform
+  annotations:
+    terraform.io/backend-config: |
+      bucket = "${terraformStateBucket}"
+      key    = "${terraformStateKey}"
+spec:
+  type: terraform
+  lifecycle: experimental
+  owner: ${teamName}
+  provides:
+    - infrastructure
+  template:
+    path: ${serverPath}
+    config:
+      source: "${terraformModuleSource}"
+      variables:
+        region: ${awsRegion}
+        # Add any other variables required by your Terraform script
+
+# Add any other sections or configurations you require for your repository
+
