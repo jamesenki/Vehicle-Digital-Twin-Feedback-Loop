@@ -4,7 +4,7 @@ name: "Vehicle Digital Twin Feedback Loop"
 description: Repository for Vehicle Digital Twin Feedback Loop
 
 componentMetadata: &componentMetadata
-  name: aws-terraform-deployment-mongo
+  name: "aws-terraform-deployment-mongo"
   description: Deployment to AWS using Terraform
 
 apiVersion: backstage.io/v1alpha1
