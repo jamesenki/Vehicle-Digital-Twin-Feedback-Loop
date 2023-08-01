@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: website
+kind: Component
 metadata:
   name: Vehicle-Digital-Twin-Feedback-Loop
   annotations:
@@ -7,4 +7,4 @@ metadata:
 spec:
   type: other
   lifecycle: unknown
-  owner: everyone
+  owner: tester
